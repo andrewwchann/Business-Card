@@ -1,7 +1,8 @@
 import React from 'react'
 import myPhoto from './andrew.jpg';
 import './App.css';
-import emailClip from './Footer_buttons.js';
+import emailClip from './components/CopyEmail.js';
+import linkedinLink from './components/LinkedinLink.js';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
           <div>
             <emailClip />
             <button className='email-button'>Email</button>
-            <a className='linkedin-button'>Linkedin</a>
+            {/* <a className='linkedin-button'>Linkedin</a> */}
+            <linkedinLink />
             {/* <button className='linkedin-button' onClick="location.href='https://www.linkedin.com/in/andrew-chan-815195239/'">Linkedin</button> */}
             <button className='github-button' onClick={<a href='https://github.com/andrewwchann'></a>}>GitHub</button>
           </div>
