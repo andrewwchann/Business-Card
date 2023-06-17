@@ -1,24 +1,32 @@
-import React from 'react'
+import React from 'react';
 import myPhoto from './andrew.jpg';
 import './App.css';
-import emailClip from './components/CopyEmail.js';
-import linkedinLink from './components/LinkedinLink.js';
+import EmailToClip from './components/CopyEmail.js';
+import Link from './components/Link.js';
 
 function App() {
   return (
     <div className='mainContent'>
       <div className="App">
-        <img className="andrew" src={myPhoto} alt="my Photo" />
+        <div className='image-container'>
+          <img className="andrew" src={myPhoto} alt="my Photo" />
+        </div>
         <header className="header">
           <p className='name'>Andrew Chan</p>
           <p className='position'>Software Engineering Student</p>
+          {/* props for the buttons information */}
           <div>
-            <emailClip />
-            <button className='email-button'>Email</button>
-            {/* <a className='linkedin-button'>Linkedin</a> */}
-            <linkedinLink />
-            {/* <button className='linkedin-button' onClick="location.href='https://www.linkedin.com/in/andrew-chan-815195239/'">Linkedin</button> */}
-            <button className='github-button' onClick={<a href='https://github.com/andrewwchann'></a>}>GitHub</button>
+            <EmailToClip
+              email="ajchan@ualberta.ca"
+            />
+            <Link
+              name="Linkedin"
+              account="https://www.linkedin.com/in/andrew-chan-815195239/"
+            />
+            <Link
+              name="GitHub"
+              account="https://github.com/andrewwchann"
+            />
           </div>
         </header>
 
@@ -35,14 +43,6 @@ function App() {
             </ul>
           </div>
         </body>
-
-        <footer>
-          <div>
-            {/* <FooterIcon /> */}
-          </div>
-
-        </footer>
-
       </div>
     </div>
   );
