@@ -27,8 +27,10 @@ ul {
   background-repeat: no-repeat;
 }
 .andrew {
-  display: block;
+  /* max-width conformed image within div */
+  max-width: 317px;
   background-size: cover;
+  transform: translate(0, -15%);
 }
 
 .header {
@@ -48,6 +50,7 @@ ul {
 }
 
 .link-button {
+  font-family: arial;
   margin-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
